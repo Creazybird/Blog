@@ -13,7 +13,7 @@ def  saveContent():
         if data.get('content'):
             user=Account.query.filter_by(id=data.get('accountId')).first()
             if user:
-                message.accountId=1
+                message.accountId=data.get('accountId')
                 message.content=data.get('content')
                 message.is_delete=0
                 message.createTime=datetime.today().strftime('%Y-%m-%d')
