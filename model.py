@@ -25,3 +25,17 @@ class Message(db.Model):
     createTime=db.Column(db.Date)
     deleteTime=db.Column(db.Date)
     updateTime=db.Column(db.Date)
+
+class Note(db.Model):
+    __tablename__='note'
+    id=db.Column(db.Integer,primary_key=id)
+    classify=db.Column(db.String(200))
+    content=db.Column(db.Text)
+    createTime=db.Column(db.Date)
+    deleteTime=db.Column(db.Date)
+    updateTime=db.Column(db.Date)
+    is_delete=db.Column(db.Integer)
+    role=db.Column(db.String(200))
+    messageId=db.Column(db.Integer)
+    title=db.Column(db.Text)
+
